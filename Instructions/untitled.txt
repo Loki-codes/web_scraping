@@ -1,0 +1,3 @@
+If I were to do this as a recurring application instead of a one off homework I would add in the camand like requests to my table to html function so that it deletes the previous html data prior to creating and inserting the new html data. 
+
+

@@ -1,13 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
 
 
 import pandas as pd
 
-
-# In[41]:
 
 
 def scrape_table():
@@ -20,18 +14,7 @@ def scrape_table():
     df1 = df1.drop(0, axis=0)
     df1 = df1.rename(columns={0: "titles", 1: "Data"})
 #     send table html out to a file. 
-    df1.to_html('./mars_table.html',header=True, index=False)
+    output = df1.to_html(header=True, index=False)
+    return output
  
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 

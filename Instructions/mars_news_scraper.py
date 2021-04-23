@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
 
 
 from splinter import Browser
@@ -9,37 +5,26 @@ from bs4 import BeautifulSoup
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-# In[5]:
 
-
-def srape_image_url():
+def scrape_news():
     
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=False)
 
-    url = "https://spaceimages-mars.com"
+    news = {}
+    url = "https://redplanetscience.com/"
     browser.visit(url)
 
     html = browser.html
     soup = BeautifulSoup(html, "html.parser")
 
-    relative_image_path= soup.find("img", class_="headerimage fade-in")["src"]
-    mars_image_url = url + "/" + relative_image_path
-    print(mars_image_url)
+    news["news_title"] = soup.find("div", class_="content_title").get_text()
+    news["news_p"] = soup.find("div", class_="article_teaser_body").get_text()
 
     # Quit the browser
     browser.quit()
 
-    return srape_image_url
-
-
-# In[6]:
-
-
-
-
-
-# In[ ]:
+    return news
 
 
 

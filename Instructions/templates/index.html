@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape</a></p>
+    </div>
+</div>
+<hr>
+<hr>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+          <p>Hello, WORK!!</p>
+        <h4 class="heading">***{{data.news.news_title}}***</h4>
+        <h2>***{{data.news.news_p}}***</h2>
+        <img src={{data.pop_image}} alt="today's Image">
+      </div>
+
+
+      <div class="col-md-6">
+        <table border="1" class="dataframe">
+            <thead>
+              <tr style="text-align: right;">
+                <th>titles</th>
+                <th>Data</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Diameter:</td>
+                <td>6,779 km</td>
+              </tr>
+              <tr>
+                <td>Mass:</td>
+                <td>6.39 × 10^23 kg</td>
+              </tr>
+              <tr>
+                <td>Moons:</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Distance from Sun:</td>
+                <td>227,943,824 km</td>
+              </tr>
+              <tr>
+                <td>Length of Year:</td>
+                <td>687 Earth days</td>
+              </tr>
+              <tr>
+                <td>Temperature:</td>
+                <td>-87 to -5 °C</td>
+              </tr>
+            </tbody>
+          </table>
+            </table>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+        <h4 class="heading">***{{data.hemi_pics[0].title}}***</h4>
+        <img src={{data.hemi_pics[0].Image_link}}>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+    <h4 class="heading">***{{data.hemi_pics[1].title}}***</h4>
+    <img src={{data.hemi_pics[1].Image_link}}>
+</div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+    <h4 class="heading">***{{data.hemi_pics[2].title}}***</h4>
+    <img src={{data.hemi_pics[2].Image_link}}>
+</div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+    <h4 class="heading">***{{data.hemi_pics[3].title}}***</h4>
+    <img src={{data.hemi_pics[3].Image_link}}>
+</div>
+</div>
+</body>
+
+</html>
+
